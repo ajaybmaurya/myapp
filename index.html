@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2665.8">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;My Custom App&lt;/title&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;My Custom Named Webpage&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button id="fetchData"&gt;Get Data&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;pre id="result"&gt;&lt;/pre&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const scriptURL = "https://script.google.com/a/macros/theporter.in/s/AKfycbzCkKin_NeoaD_XQ_1bDts-OZOMR37KkaB1vGXJs2wy1u8Lua1yRTMOyb2hoPqNn21cSw/exec";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('fetchData').addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>fetch(scriptURL)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.then(response =&gt; response.text())</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.then(data =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>document.getElementById('result').textContent = data;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>})</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.catch(error =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>document.getElementById('result').textContent = 'Error: ' + error;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
