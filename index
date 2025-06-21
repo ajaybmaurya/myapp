@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PNM TnB Team</title>
+</head>
+<body>
+  <h1>Welcome to TnB App</h1>
+  <button id="loadData">Load Data</button>
+  <pre id="output"></pre>
+
+  <script>
+    const scriptURL = "https://script.google.com/a/macros/theporter.in/s/AKfycbzCkKin_NeoaD_XQ_1bDts-OZOMR37KkaB1vGXJs2wy1u8Lua1yRTMOyb2hoPqNn21cSw/exec";
+
+    document.getElementById('loadData').addEventListener('click', () => {
+      fetch(scriptURL)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('output').textContent = data;
+        })
+        .catch(err => {
+          document.getElementById('output').textContent = 'Error: ' + err;
+        });
+    });
+  </script>
+</body>
+</html>
